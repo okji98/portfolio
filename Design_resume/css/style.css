@@ -1,0 +1,659 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'KOHIBaeumOTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KOHIBaeumOTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Handletter';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_05@1.0/Handletter.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/*common*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'GmarketSansMedium';
+    color: #333;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+ul, li{
+    list-style: none;
+}
+#section1,#section2,#section3,#section4{
+    position: relative;
+}
+
+
+/*section0*/
+#section0 .main{
+    padding: 4% 6%;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+#section0 .main h1{
+    margin-top: 20px;
+    font-weight: bold;
+    color: #473109;
+}
+#section0 .main h1::after{
+    content: "";
+    display: block;
+    width: 216px;
+    height: 2px;
+    background: #fff;
+}
+#section0 .main > .main_v{
+    justify-content: space-between;
+    margin-top: 33%;
+}
+#section0 .main > .main_v > p{
+    font-size: 14px;
+    color: #473109;
+    position: absolute;
+    right: 16%;
+}
+#section0 .main > .main_v > .title{
+    display: flex;
+    margin-right: 10%;
+    position: relative;
+    z-index: 99;
+}
+#section0 .main > .main_v > .title li{
+    margin: 0 30px;
+}
+#section0 .main > .main_v > .title li a{
+    color: #473109;
+    display: block;
+    transition: .3s;
+}
+#section0 .main > .main_v > .title li a::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #473109;
+    transition: .3s;
+    margin: 0 auto;
+}
+#section0 .main > .main_v > .title li a:hover::after{
+    width: 100%;
+    margin: 0 auto;
+}
+#section0 .main .okji{
+    position: absolute;
+    top: 12px;
+    left: calc(50% - 400px);
+    overflow: hidden;
+    z-index: 1;
+    opacity: 0;
+    transition: 5s;
+}
+#section0 .main .okji.on{
+    opacity: 1;
+}
+#section0 .main .okji img{
+    height: 900px;
+}
+#section0 .main span{
+    color: #473109;
+    position: absolute;
+    z-index: 99;
+    font-size: 70px;
+    top: 240px;
+    left: 340px;
+    font-family: 'KOHIBaeumOTF';
+    font-weight: bold;
+    opacity: 0;
+    transition: 2s;
+}
+#section0 .main span.on{
+    opacity: 1;
+}
+
+
+/*section1*/
+#section1 .intro{
+    padding: 4% 7% 4% 10%;
+    display: flex;
+    justify-content: space-between;
+}
+#section1 .photo{
+    position: relative;
+}
+#section1 .photo > img{
+    height: 300px;
+    position: relative;
+    z-index: 99;
+}
+#section1 .photo .p_bg1{
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 100%;
+    height: 300px;
+    border: 3px solid #473109;
+    z-index: 1;
+}
+#section1 .left .name h2{
+    margin: 30px 0;
+    color: #473109;
+}
+#section1 .left .name p{
+    font-size: 14px;
+    line-height: 20px;
+}
+
+
+#section1 .center .skills h2{
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #473109;
+}
+#section1 .center .skills ul li{
+    margin: 20px 0;
+}
+#section1 .center .skills ul li p{
+    font-size: 16px;
+    margin-bottom: 20px;
+    position: relative;
+}
+#section1 .center .skills ul li p span{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#section1 .center .skills ul li > div{
+    width: 300px;
+    height: 20px;
+    background: #ddd;
+    border-radius: 20px;
+    position: relative;
+}
+#section1 .center .skills ul li > div::after{
+    transition: 1s;
+    width: 0;
+    height: 20px;
+    content: "";
+    background: linear-gradient(65deg , rgb(254, 255, 239, 0.4), rgb(254, 255, 239, 0.7), rgb(254, 255, 239, 1));
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    border-radius: 20px;
+    box-sizing: border-box;
+    border: 1px solid #aaaaaa;
+}
+#section1 .center .skills ul.on li .bar::after{
+    width: 90%;
+}
+#section1 .center .skills ul.on li .p_bar::after{
+    width: 70%;
+}
+#section1 .center .skills ul.on li .f_bar::after{
+    width: 80%;
+}
+
+#section1 .right > div{
+    position: relative;
+}
+#section1 .right > div > ul > li:first-of-type{
+    padding-bottom: 40px;
+}
+#section1 .right > div > ul > li h3{
+    margin-bottom: 10px;
+    color: #473109;
+    font-size: 24px;
+}
+#section1 .right > div > ul > li p::before{
+    content: "·";
+    display: inline-block;
+    margin-right: 10px;
+}
+#section1 .right > div .r_div{
+    position: absolute;
+    top: 58%;
+    left: 0px;
+    width: 100%;
+    height: 230px;
+    border: 3px solid #473109;
+    z-index: 1;
+    padding: 11% 4% 4% 10%;
+    box-sizing: border-box;
+    border-radius: 50px;
+}
+#section1 .b1{
+    position: absolute;
+    top: 30px;
+    right: 10%;
+    transform: rotate(30deg);
+}
+#section1 .b2{
+    position: absolute;
+    bottom: 32px;
+    left: 3%;
+    transform: rotate(-30deg);
+}
+
+.drawsvg,svg {
+    width: 100%; 
+    height: 198px; 
+    margin-top: 26px;
+}
+
+.stroke {
+    stroke: #000; stroke-width: 1px; stroke-dasharray: 0 250;
+    stroke-opacity: 1; fill: none;
+    -webkit-animation: stroke_offset 8s infinite;
+    animation: stroke_offset 8s infinite;
+    -webkit-animation-timing-function: cubic-bezier(.25, .46, .45, .94);
+    animation-timing-function: cubic-bezier(.25, .46, .45, .94);
+}
+
+@-webkit-keyframes stroke_offset {
+    100%, 25% {stroke-dasharray: 0 250; stroke-opacity: 1
+    }
+    50%, 75% {stroke-dasharray: 250 0; stroke-opacity: .75
+    }
+    55%, 70% {stroke-dasharray: 250 0; stroke-opacity: 0
+    }
+}
+
+@keyframes stroke_offset {
+    100%, 25% {stroke-dasharray: 0 250; stroke-opacity: 1
+    }
+    50%, 75% {stroke-dasharray: 250 0; stroke-opacity: .75
+    }
+    55%, 70% {stroke-dasharray: 250 0; stroke-opacity: 0
+    }
+}
+
+.fill { fill: #000; fill-opacity: 0;
+    -webkit-animation: fill_offset 8s infinite;
+    animation: fill_offset 8s infinite;
+    -webkit-animation-timing-function: cubic-bezier(.25, .46, .45, .94);
+    animation-timing-function: cubic-bezier(.25, .46, .45, .94)
+}
+
+@-webkit-keyframes fill_offset {
+    100%, 25%, 35%, 90% {
+        fill-opacity: 0
+    }
+    50%, 70% {
+        fill-opacity: 1
+    }
+}
+
+@keyframes fill_offset {
+    100%, 25%, 35%, 90% {
+        fill-opacity: 0
+    }
+    50%, 70% {
+        fill-opacity: 1
+    }
+}
+
+#fade-text { 
+    font-family: 'Handletter', cursive; font-size: 50px;
+}
+
+
+.t_btn{
+    position: absolute;
+    right: 100px;
+    bottom: 100px;
+    border: 2px solid #333;
+    color: #333;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: .3s;
+    cursor: pointer;
+    text-align: center;
+}
+.t_btn:hover{
+    background: #333;
+    color: #fff;
+}
+
+
+/*section2*/
+#section2 .vis{
+    display: flex;
+    height: 100%;
+}
+#section2 .vis .title{
+    width: 60%;
+    background: url(../images/bnr1.jpg) no-repeat center/cover;
+}
+#section2 .vis .title p{
+    font-size: 16px;
+    font-weight: bold;
+    transform: rotate(270deg);
+    position: absolute;
+    top: 58%;
+    left: -3%;
+    color: #000;
+}
+#section2 .vis .t2{
+    background: url(../images/bnr2.jpg) no-repeat center/cover;
+}
+#section2 .vis .t3{
+    background: url(../images/bnr4.jpg) no-repeat center;
+    background-color: rgba(156,158,200,0.7);
+}
+#section2 .vis .t4{
+    background: url(../images/bnr3.jpg) no-repeat center/cover;
+}
+#section2 .vis .t2 p{
+    left: 22%;
+}
+#section2 .vis .t3 p{
+    left: 47%;
+}
+#section2 .vis .t4 p{
+    left: 72%;
+}
+#section2 .vis .title p::before{
+    content: "";
+    width: 510px;
+    height: 5px;
+    display: inline-block;
+    background: #000;
+    margin-bottom: 4px;
+    margin-right: 20px;
+}
+#section2 .vis .title p span{
+    font-size: 70px;
+}
+
+#section2 .vis .title + div{
+    width: 40%;
+    padding: 4% 4% 4%;
+}
+#section2 .vis .title + div h2{
+    font-size: 60px;
+    color: #000;
+    margin-bottom: 10px;
+}
+#section2 .vis .title + div ul::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+#section2 .vis .title + div ul li{
+    float: left;
+    line-height: 1.2;
+    margin-right: 20px;
+    background: #473109;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 6px 10px;
+    margin-bottom: 100px;
+}
+#section2 .vis .title + div dl dd{
+    font-size: 20px;
+    font-weight: 200;
+    position: relative;
+    width: 500px;
+    margin-bottom: 30px;
+}
+#section2 .vis .title + div dl dd span{
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#section2 .vis .title + div a:hover{
+    color: #fff;
+}
+#section2 .vis .title + div .fa{
+    margin-left: 500px;
+    background: #473109;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 10px;
+    transition: 2s;
+    color: #fff;
+}
+#section2 .vis .title + div h3{
+    font-size: 40px;
+}
+#section2 .vis .title + div h3::after{
+    content: "";
+    display: block;
+    width: 300px;
+    height: 5px;
+    background: #473109;
+}
+#section2 .vis .title + div h3 + p{
+    margin-bottom: 100px;
+    margin-top: 20px;
+}
+
+
+
+.fp-controlArrow.fp-prev,
+.fp-controlArrow.fp-next{
+    border:none; 
+}
+.fp-controlArrow.fp-prev::before {
+    content:"\e93b";
+    font-family: xeicon;
+    position: absolute;
+    left: 885px;
+    font-size: 40px;
+    background: rgba(0,0,0,0.7);
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    color: #fff;
+    bottom: -514px;
+}
+.fp-controlArrow.fp-next::before{
+    content: "\e93e";
+    font-family: xeicon;
+    position: absolute;
+    right: 845px;
+    font-size: 40px;
+    background: rgba(0,0,0,0.7);
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    color: #fff;
+    bottom: -514px;
+}
+
+
+
+/*section3*/
+#section3 .pbt{
+    padding: 4% 6%;
+    height: 80%;
+}
+#section3 .tit{
+    color: #473109;
+    text-align: center;
+    font-weight: bold;
+    font-size: 60px;
+}
+#section3 .spb{
+    display: flex;
+    justify-content: space-between;
+}
+#section3 .pos ul{
+    margin-top: 50px;
+}
+#section3 .pos ul li{
+    color: #473109;
+    margin: 80px 0;
+}
+#section3 .pos ul li h2{
+    margin-bottom: 10px;
+    color: #0d4f18;
+}
+#section3 .r_pos{
+    padding-top: 100px;
+}
+#section3 .r_pos img{
+    filter: invert(5%) sepia(90%) saturate(220%) hue-rotate(43deg) brightness(81%) contrast(103%);
+    position: relative;
+}
+#section3 .hex{
+    width: 500px;
+    height: 400px;
+    background: #0d4f18d0;
+    position: absolute;
+    top: 38%;
+    right: 200px;
+    opacity: 0;
+    transition: 1s;
+    clip-path: polygon(48% 41%, 54% 40%, 57% 46%, 57% 57%, 45% 56%, 44% 47%);
+    z-index: 9999;
+}
+#section3 .hex.on{
+    clip-path: polygon(32% -5%, 47% -42%, 95% 43%, 68% 78%, 36% 77%, 16% 43%);
+    opacity: 1;
+}
+#section3 .pos ul li h2 span{
+    position: relative;
+    display: inline-block;
+}
+#section3 .pos ul li h2 span::after{
+    content: "";
+    display: none;
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    top: 20px;
+}
+#section3 .b3{
+    position: absolute;
+    top: 26%;
+    left: 55%;
+    transform: rotate(-58deg);
+    animation-name: b3;
+    animation-duration: 2s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes b3{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.p_top{
+    position: absolute;
+    right: 100px;
+    bottom: 100px;
+    border: 2px solid #fff;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: .3s;
+    cursor: pointer;
+    text-align: center;
+}
+.p_top:hover{
+    background: #fff;
+    color: #000;
+}
+
+
+/*section4*/
+#section4{
+    /* background: url(../images/bbbg.jpg) no-repeat center/cover; */
+}
+.bg4{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+#section4 .cover{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+#section4 .cover .title{
+    width: 40%;
+    position: relative;
+}
+#section4 .bnr{
+    width: 38%;
+    color: #333;
+    padding: 2% 0 2% 4%;
+    position: absolute;
+    top: 34%;
+    right: 0;
+    border-radius: 50px 0 0 50px;
+    z-index: 50;
+    box-sizing: border-box;
+    font-weight: bold;
+    background: #e6df00;
+}
+#section4 .bnr a{
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+}
+#section4 .bnr .t_p{
+    font-size: 26px;
+}
+#section4 .bnr p{
+    font-size: 18px;
+}
+#section4 .bnr .s_title{
+    margin-bottom: 10px;
+    text-align: end;
+    margin-right: 60px;
+}
+#section4 .bnr .s_title h2{
+    margin-bottom: 20px;
+}
+.text_box{
+    font-size: 2rem;
+}
+.b_title{
+    margin-top: 0;
+    text-align: end;
+    margin-right: 60px;
+}
+.blink {
+    animation: blink 0.5s infinite;
+    font-size: 2.5rem;
+}
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}

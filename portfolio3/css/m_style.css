@@ -1,0 +1,355 @@
+@media (max-width:480px) { /* 모바일용 */
+    .pc{ display: none !important;}
+    .wrap{ width: 94%; margin: 0 auto;}
+    
+/*header*/
+header .inner{
+    width: 94%;
+    height: 60px;
+}
+header h1{
+    width: 30%;
+    margin-top: 6px;
+}
+header .m_menu{
+    font-size: 28px;
+    position: absolute;
+    top: 13%;
+    right: 2%;
+}
+    
+    
+/*menu*/
+#menu .click_menu{
+    position: absolute;
+    top: 2%;
+    left: 0;
+    color: #fff;
+    z-index: 50;
+    width: 100%;
+}
+#menu .click_menu::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+#menu .click_menu h2{
+    font-size: 40px;
+    margin-bottom: 18px;
+    text-align: center;
+}
+#menu .click_menu > div{
+    margin: 0 auto;
+    width: 94%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+#menu .click_menu button{
+    font-size: 14px;
+    display: block;
+    margin-bottom: 0;
+}
+#menu .click_menu button.select{
+    font-size: 15px;    
+}
+
+#menu .bnr .signature,
+#menu .bnr .beverage,
+#menu .bnr .coffee,
+#menu .bnr .cookie{
+    width: 0;
+    opacity: 0;
+    transition: .3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+
+#menu .bnr .r_bnr{
+    width: 94%;
+    margin: 0 auto;
+}
+#menu .bnr .r_bnr .r_title{
+    padding: 0;
+    margin-top: 20%;
+}
+#menu .bnr .r_bnr .r_title h3{
+    font-size: 28px;
+}
+#menu .bnr .r_bnr .r_title p{
+    font-size: 14px;
+}
+#menu .bnr .r_bnr .sig_m{
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10% 0;
+}
+#menu .bnr .r_bnr .sig_m img{
+    width: 30%;
+}
+#menu .bnr .r_bnr .rec{
+    padding: 0;
+    margin: 0;
+}
+#menu .bnr .r_bnr .rec h3{
+    font-size: 18px;
+}
+#menu .bnr .r_bnr .rec ul{
+    margin-top: 10%;
+}
+#menu .bnr .r_bnr .rec ul li{
+    width: 25%;
+}
+#menu .bnr .r_bnr .rec ul li p{
+    font-size: 12px;
+}
+#menu .bnr .signature .l_bnr{
+    width: 100%;
+    height: 518px;
+}
+#menu .bnr .beverage .l_bnr{
+    width: 100%;
+    height: 518px;
+}
+#menu .bnr .coffee .l_bnr{
+    width: 100%;
+    height: 518px;
+}
+#menu .bnr .cookie .l_bnr{
+    width: 100%;
+    height: 518px;
+}    
+    
+    
+/*my_coffee*/
+#my_coffee .c_title{
+    margin-top: 50%;
+    height: 120px;
+}
+#my_coffee .c_title h2{
+    padding: 7% 0;
+}
+#my_coffee .c_title h2 img{
+    width: 70%;
+}
+#my_coffee .ani > img{
+    max-width: 100%;
+}
+#my_coffee .ani > div{
+    height: auto;
+    width: 100%;
+}
+#my_coffee .ani > div > p{
+    white-space: nowrap;
+    animation: anima 5s linear infinite;
+    padding-top: 0;
+    margin: 0 4%;
+}
+#my_coffee .ani > div > p img{
+    margin-top: 0;
+    width: 10%;
+    vertical-align: middle;
+    display: inline-block;
+}
+#my_coffee .ani > div span{
+    font-size: 14px;
+    margin-left: 0;
+}
+@keyframes anima{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}    
+    
+    
+/*news*/
+#news .event{
+    display: block;
+}
+#news .event .n_title{
+    width: 94%;
+    border-right: none;
+    margin: 10% auto;
+}
+#news .event .n_title h2{
+    padding: 0;
+    font-size: 36px;
+    line-height: 36px;
+}
+
+#news .event ul{
+    width: 94%;
+    margin: 0 auto;
+}
+#news .event ul li{
+    padding: 6% 0;
+    border-bottom: 1px solid #ddd;
+}
+#news .event ul li:first-of-type{
+    border-top: 1px solid #ddd;
+}
+#news .event ul li a{
+    font-size: 14px;
+}
+#news .event ul li a .tit{
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 80%;
+}
+#news .event ul li a span{
+    font-size: 14px;
+    margin: 0;
+}
+#news .event ul li a i{
+    font-size: 30px;
+    top: calc(50% - 15px);
+}    
+    
+    
+/*sns*/
+#sns{
+    margin-top: 60px;
+    height: 450px;
+}
+#sns .s_title > img{
+    height: 40px;
+}
+#sns  .s_title h2{
+    font-size: 30px;
+}
+#sns .slide{
+    padding: 0;
+    width: 70%;
+} 
+#sns .prev{
+    top: 33%;
+    left: 0;
+    font-size: 40px;
+}
+#sns .next{
+    top: 33%;
+    right: 0;
+    font-size: 40px;
+}    
+    
+    
+/*footer*/
+footer .wrap h2{
+    margin-bottom: 3%;
+}
+
+footer .wrap > p{
+    font-size: 14px;
+}
+footer .wrap .info{
+    width: 94%;
+    text-align: left;
+}
+footer .wrap .info li{
+    float: none;
+    font-size: 12px;
+}
+footer .wrap .info li::after{
+    display: none;
+}
+footer .wrap .copy{
+    font-size: 12px;
+}    
+    
+    
+/*mob teb*/
+.teb{
+    width: 90%;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9999999;
+    background: #fff;
+    box-shadow: -100px 0 200px 0 #fff;
+    display: none;
+}
+.teb .conteiner{
+    padding: 30% 10% 10%;
+}
+.teb .conteiner .t_gnb li{
+    margin-bottom: 6%;
+}
+.teb .conteiner .t_gnb li span{
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    display: block;
+}
+.teb .conteiner .t_gnb li span i{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+}
+.teb .conteiner .t_gnb li .t_snb li{
+    padding: 3% 0;
+}
+.teb .conteiner .t_gnb li .t_snb{
+    display: none;
+}
+.teb .conteiner .t_gnb li .t_snb.slide{
+    display: block;
+}
+.teb .conteiner .teb_sns{
+    margin: 18% 0;
+}
+.teb .conteiner .teb_sns a{
+    margin-right: 4%;
+}
+.teb .conteiner > a{
+    background: #ff4713;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+.teb .conteiner > button{
+    background-color: transparent;
+    border: none;
+    color: #ff4713;
+    font-size: 30px;
+    position: absolute;
+    top: 5%;
+    right: 10%;
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
+@media (min-width:801px) { /* PC용 */
+    .mob{ display: none !important;}
+} 
