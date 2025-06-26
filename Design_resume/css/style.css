@@ -455,7 +455,7 @@ ul, li{
     border:none; 
 }
 .fp-controlArrow.fp-prev::before {
-    content:"\e93b";
+    content:"◀";
     font-family: xeicon;
     position: absolute;
     left: 885px;
@@ -469,7 +469,7 @@ ul, li{
     bottom: -514px;
 }
 .fp-controlArrow.fp-next::before{
-    content: "\e93e";
+    content: "▶";
     font-family: xeicon;
     position: absolute;
     right: 845px;
