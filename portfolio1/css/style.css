@@ -1,3 +1,49 @@
+
+/* CSS 로딩 확인용 - 이 코드를 style.css 파일 맨 앞에 추가하세요 */
+body { 
+    /* 이 스타일이 적용되면 CSS가 정상 로딩된 것입니다 */
+    background-color: #ffffff !important; 
+}
+
+/* 기존 style.css 내용 아래에 그대로 유지... */
+
+/* web font */
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* reset */
+*{ margin: 0; padding: 0;}
+li{ list-style: none;}
+a{ text-decoration: none; color: inherit;}
+img{ vertical-align: top;}
+
+/* common */
+html{ overflow-x: hidden;}
+body{ font: 14px/1.6 "Pretendard-Regular"; color: #666;}
+.wrap{ width: 80%; margin: 0 auto; position: relative;}
+.wrap::after, ul::after, .cl::after{ content: ""; clear: both; display: block;}
+.blind{ position: absolute; left: -9999px; font-size: 0; width: 0; height: 0; overflow: hidden;}
+.fl{ display: flex; align-items: center; justify-content: center;}
+.fl::after{ display: none;}
+.ptr{ font-family: "Pretendard-Regular";}
+
+/* 스크롤바 스타일 */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+body::-webkit-scrollbar-thumb {
+    height: 30%;
+    background: #217af4;
+    border-radius: 10px;
+}
+body::-webkit-scrollbar-track {
+    background: rgba(33, 122, 244, .1);
+}
+
 /* web font */
 @font-face {
     font-family: 'Pretendard-Regular';
@@ -2396,4 +2442,213 @@ aside .tit + div + ul + div{
     content: "|";
     margin: 0 10px;
     color: #ddd;
+}
+
+/* 기존 CSS에 추가할 수정사항들 */
+
+/* jQuery 로딩 전 숨김 처리 */
+.loading {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.loaded {
+    opacity: 1;
+}
+
+/* 반응형 이미지 수정 */
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+/* 헤더 고정 시 Z-index 수정 */
+header {
+    z-index: 9999 !important;
+}
+
+header.fix {
+    z-index: 9999 !important;
+}
+
+/* SNB 메뉴 Z-index 수정 */
+header .snb {
+    z-index: 9998 !important;
+}
+
+/* 탭메뉴 Z-index 수정 */
+#tab_menu {
+    z-index: 99999 !important;
+}
+
+#tab_menu_m {
+    z-index: 99999 !important;
+}
+
+/* 슬라이드 오버플로우 수정 */
+#sec1 .wrap .rpr .slide .slide_cover {
+    overflow: hidden;
+    position: relative;
+}
+
+#sec1 .wrap .rpr .slide1 {
+    position: relative;
+    transition: left 0.3s ease-in-out;
+}
+
+/* 스와이퍼 오류 방지 */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+}
+
+/* 유튜브 팝업 Z-index 수정 */
+.cont {
+    z-index: 999999 !important;
+}
+
+/* 모바일 반응형 개선 */
+@media (max-width: 768px) {
+    /* 헤더 높이 조정 */
+    header {
+        height: auto;
+        min-height: 60px;
+    }
+    
+    /* 메인 비디오 높이 조정 */
+    #main .video {
+        height: 50vh;
+        min-height: 300px;
+    }
+    
+    /* 섹션 패딩 조정 */
+    #sec1 {
+        padding: 60px 0;
+    }
+    
+    /* 슬라이드 버튼 크기 조정 */
+    #lh_tv .wrap > button {
+        width: 30px;
+        height: 50px;
+        font-size: 16px;
+    }
+}
+
+/* AOS 애니메이션 충돌 방지 */
+[data-aos] {
+    pointer-events: none;
+}
+
+[data-aos].aos-animate {
+    pointer-events: auto;
+}
+
+/* 스크롤바 스타일 개선 */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* 접근성 개선 */
+.blind {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* 포커스 스타일 개선 */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #2f5bc1;
+    outline-offset: 2px;
+}
+
+/* 버튼 호버 효과 개선 */
+button:hover {
+    cursor: pointer;
+}
+
+/* 이미지 로딩 오류 방지 */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+img[src=""], img:not([src]) {
+    opacity: 0;
+}
+
+/* 레이아웃 안정성 개선 */
+.wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* 플렉스박스 폴백 */
+.fl {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+/* 그리드 시스템 보완 */
+.cl::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* 애니메이션 성능 개선 */
+* {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* 스크롤 성능 개선 */
+body {
+    -webkit-overflow-scrolling: touch;
+}
+
+/* 텍스트 렌더링 개선 */
+body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
