@@ -29,7 +29,7 @@ body{ font: 14px/1.6 "ptr"; color: #666;}
 .fl{ display: flex; align-items: center; justify-content: space-between;}
 .fl::after{ display: none;}
 .gsm{ font-family: "gsm";}
-
+.fz50{font-size: 50px !important;}
 /* index header */
 header .snb{
     border-bottom: 1px solid #ddd;
