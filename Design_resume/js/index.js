@@ -4,7 +4,7 @@ let isFullPageActive = false;
 
 // fullPage 초기화 함수
 function initFullPage() {
-    if (window.innerWidth > 1600 && !isFullPageActive) {
+    if (window.innerWidth > 1200 && !isFullPageActive) {
         fullpageInstance = $('#fullpage').fullpage({
             anchors: ['visual', 'about', 'portfolio', 'process', 'contact'],
             sectionsColor: ['#FEFFEF', '#ffffff', '#ffffff', '#FEFFEF', '#FEFFEF'],
@@ -51,17 +51,22 @@ function initFullPage() {
     }
 }
 
-// fullPage 파괴 함수
+// fullPage 파괴 함수 (레이아웃은 유지)
 function destroyFullPage() {
-    if (window.innerWidth <= 1600 && isFullPageActive && fullpageInstance) {
+    if (window.innerWidth <= 1200 && isFullPageActive && fullpageInstance) {
         $.fn.fullpage.destroy('all');
         isFullPageActive = false;
         
-        // 파괴 후 필요한 클래스 및 이벤트 재설정
+        // 파괴 후 기본 스타일만 리셋 (레이아웃 변경 안함)
         $('.section').css({
             'height': 'auto',
             'min-height': '100vh'
         });
+        
+        // 기본 애니메이션들 활성화
+        $(".okji").addClass("on");
+        $("#section0 .main span").addClass("on");
+        $(".skills ul").addClass("on");
         
         // 스크롤 이벤트로 애니메이션 처리
         handleScrollAnimations();
@@ -73,18 +78,6 @@ function handleScrollAnimations() {
     $(window).on('scroll.customScroll', function() {
         const scrollTop = $(window).scrollTop();
         const windowHeight = $(window).height();
-        
-        // Section 0 애니메이션
-        if (scrollTop < windowHeight) {
-            $(".okji").addClass("on");
-            $("#section0 .main span").addClass("on");
-        }
-        
-        // Section 1 애니메이션
-        const section1Top = $('#section1').offset().top;
-        if (scrollTop + windowHeight * 0.8 > section1Top) {
-            $(".skills ul").addClass("on");
-        }
         
         // Section 3 애니메이션
         const section3Top = $('#section3').offset().top;
@@ -104,14 +97,14 @@ function handleScrollAnimations() {
 
 // 반응형 체크 및 fullPage 토글
 function checkResponsive() {
-    if (window.innerWidth > 1600) {
+    if (window.innerWidth > 1200) {
         // 큰 화면: fullPage 활성화
         if (!isFullPageActive) {
             $(window).off('scroll.customScroll'); // 커스텀 스크롤 이벤트 제거
             initFullPage();
         }
     } else {
-        // 작은 화면: fullPage 파괴
+        // 작은 화면: fullPage 파괴 (레이아웃은 CSS에서 처리)
         destroyFullPage();
     }
 }
@@ -121,9 +114,10 @@ $(document).ready(function() {
     checkResponsive();
     
     // 처음부터 작은 화면이면 애니메이션 바로 적용
-    if (window.innerWidth <= 1600) {
+    if (window.innerWidth <= 1200) {
         $(".okji").addClass("on");
         $("#section0 .main span").addClass("on");
+        $(".skills ul").addClass("on");
     }
 });
 

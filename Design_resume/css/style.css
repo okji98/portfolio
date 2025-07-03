@@ -6,16 +6,17 @@
 }
 @font-face {
     font-family: 'KOHIBaeumOTF';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KOHIBaeumOTF.woff') format('woff');
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_05@1.0/KOHIBaeumOTF.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Handletter';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_05@1.0/Handletter.woff') format('woff');
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/Handletter.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
+
 /*common*/
 *{
     margin: 0;
@@ -35,7 +36,6 @@ ul, li{
 #section1,#section2,#section3,#section4{
     position: relative;
 }
-
 
 /*section0*/
 #section0 .main{
@@ -109,20 +109,20 @@ ul, li{
     height: 900px;
 }
 #section0 .main span{
+    font-family: "Handletter";
+    font-weight: bold;
     color: #473109;
     position: absolute;
     z-index: 99;
     font-size: 70px;
     top: 240px;
     left: 340px;
-    font-family: 'KOHIBaeumOTF';
     opacity: 0;
     transition: 2s;
 }
 #section0 .main span.on{
     opacity: 1;
 }
-
 
 /*section1*/
 #section1 .intro{
@@ -156,7 +156,6 @@ ul, li{
     font-size: 14px;
     line-height: 20px;
 }
-
 
 #section1 .center .skills h2{
     font-size: 24px;
@@ -238,8 +237,8 @@ ul, li{
 }
 #section1 .b1{
     position: absolute;
-    top: 30px;
-    right: 10%;
+    top: 0;
+    right: 2%;
     transform: rotate(30deg);
 }
 #section1 .b2{
@@ -247,6 +246,7 @@ ul, li{
     bottom: 32px;
     left: 0;
     transform: rotate(-30deg);
+    height: 150px;
 }
 
 .drawsvg,svg {
@@ -308,9 +308,8 @@ ul, li{
 }
 
 #fade-text { 
-    font-family: 'Handletter', cursive; font-size: 50px;
+    font-family: 'Handletter', cursive; font-size: 38px;
 }
-
 
 .t_btn{
     position: absolute;
@@ -331,7 +330,6 @@ ul, li{
     background: #333;
     color: #fff;
 }
-
 
 /*section2*/
 #section2 .vis{
@@ -410,7 +408,7 @@ ul, li{
     padding: 4% 4% 4%;
 }
 #section2 .vis .title + div h2{
-    font-size: 60px;
+    font-size: 50px;
     color: #000;
     margin-bottom: 10px;
 }
@@ -428,13 +426,13 @@ ul, li{
     border-radius: 20px;
     font-size: 14px;
     padding: 6px 10px;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
 }
 #section2 .vis .title + div dl dd{
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 200;
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 #section2 .vis .title + div dl dd span{
     font-weight: bold;
@@ -446,15 +444,14 @@ ul, li{
     color: #fff;
 }
 #section2 .vis .title + div .fa{
-    margin-left: 500px;
     background: #473109;
     padding: 10px 20px;
-    margin-right: 10px;
     border-radius: 10px;
     transition: 2s;
     color: #fff;
 }
 #section2 .vis .title + div h3{
+    margin-top: 50px;
     font-size: 40px;
 }
 #section2 .vis .title + div h3::after{
@@ -465,51 +462,55 @@ ul, li{
     background: #473109;
 }
 #section2 .vis .title + div h3 + p{
-    margin-bottom: 100px;
+    margin-bottom: 20px;
     margin-top: 20px;
 }
-
-
 
 .fp-controlArrow.fp-prev,
 .fp-controlArrow.fp-next{
     border:none; 
 }
 .fp-controlArrow.fp-prev::before {
-    content:"◀";
+    content: "◀";
     font-family: xeicon;
-    position: absolute;
-    left: 885px;
-    font-size: 40px;
-    background: rgba(0,0,0,0.7);
-    width: 80px;
-    height: 80px;
+    position: fixed;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
     text-align: center;
-    line-height: 80px;
+    line-height: 42px;
     color: #fff;
-    bottom: -514px;
+    border-radius: 50%;
+    z-index: 9999;
+    padding-right: 5px;
 }
 .fp-controlArrow.fp-next::before{
     content: "▶";
     font-family: xeicon;
-    position: absolute;
-    right: 845px;
-    font-size: 40px;
+    position: fixed;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
     background: rgba(0,0,0,0.7);
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     text-align: center;
-    line-height: 80px;
+    line-height: 42px;
     color: #fff;
-    bottom: -514px;
+    border-radius: 50%;
+    z-index: 9999;
+    padding-left: 5px;
 }
-
-
 
 /*section3*/
 #section3 .pbt{
     padding: 4% 6%;
-    height: 80%;
+    height: 90%;
 }
 #section3 .tit{
     color: #473109;
@@ -536,7 +537,7 @@ ul, li{
     padding-top: 100px;
 }
 #section3 .r_pos img{
-    filter: invert(5%) sepia(90%) saturate(220%) hue-rotate(43deg) brightness(81%) contrast(103%);
+    /* filter: invert(5%) sepia(90%) saturate(220%) hue-rotate(43deg) brightness(81%) contrast(103%); */
     position: relative;
 }
 #section3 .hex{
@@ -608,11 +609,7 @@ ul, li{
     color: #000;
 }
 
-
 /*section4*/
-#section4{
-    /* background: url(../images/bbbg.jpg) no-repeat center/cover; */
-}
 .bg4{
     width: 100%;
     height: 100%;
@@ -679,828 +676,388 @@ ul, li{
   }
 }
 
+/* ============================================
+   반응형 미디어쿼리 (레이아웃 침범 방지)
+   ============================================ */
 
-
-
-
-
-
-/* 1600px 이하에서 fullPage 파괴 시 스타일 */
+/* 1600px 이하 - 기본 레이아웃 유지하면서 요소 크기만 조정 */
 @media screen and (max-width: 1600px) {
-    /* 기본 레이아웃 리셋 */
-    html, body {
-        overflow: auto !important;
-        height: auto !important;
-    }
-    
-    .section {
-        height: auto !important;
-        min-height: 100vh;
-        position: relative !important;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    /* 네비게이션 숨기기 */
-    #fp-nav {
-        display: none !important;
-    }
-    
-    /* 슬라이드 화살표 위치 조정 */
-    .fp-controlArrow {
-        display: none !important;
-    }
-    
-    /* 슬라이드 레이아웃 조정 */
-    .fp-slides,
-    .fp-slidesContainer {
-        width: 100% !important;
-        transform: none !important;
-        transition: none !important;
-    }
-    
-    .fp-slide {
-        width: 100% !important;
-        position: relative !important;
-        float: none !important;
-    }
-    
-    /* 슬라이드를 세로로 배치 */
-    #section2 .slide {
-        display: block
-    }
-@keyframes blink {
-  to {
-    opacity: 0;
-  }
-}
-
-/* 반응형 미디어 쿼리 */
-/* 태블릿 사이즈 (1024px 이하) */
-@media screen and (max-width: 1024px) {
-    /* section0 반응형 */
-    #section0 .main h1 {
-        font-size: 36px;
-    }
-    
-    #section0 .main span {
-        font-size: 40px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        width: 80%;
-    }
-    
+    /* Section0 조정 */
     #section0 .main .okji {
-        display: none;
+        left: calc(50% - 300px);
     }
-    
-    #section0 .main > .main_v {
-        margin-top: 20%;
+    #section0 .main .okji img {
+        height: 700px;
     }
-    
-    #section0 .main > .main_v > .title {
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-right: 0;
-    }
-    
-    #section0 .main > .main_v > .title li {
-        margin: 10px 15px;
-    }
-    
-    /* section1 반응형 */
-    #section1 .intro {
-        flex-direction: column;
-        padding: 4%;
-        align-items: center;
-    }
-    
-    #section1 .left, #section1 .center, #section1 .right {
-        width: 100%;
-        margin-bottom: 30px;
-    }
-    
-    #section1 .photo > img {
-        height: 200px;
-    }
-    
-    #section1 .photo .p_bg1 {
-        height: 200px;
-    }
-    
-    #section1 .center .skills ul li > div {
-        width: 100%;
-        max-width: 300px;
-    }
-    
-    #section1 .b1, #section1 .b2 {
-        display: none;
-    }
-    
-    /* section2 반응형 */
-    #section2 .vis {
-        flex-direction: column;
-    }
-    
-    #section2 .vis .title {
-        width: 100%;
-        height: 40%;
-    }
-    
-    #section2 .vis .title + div {
-        width: 100%;
-        height: 60%;
-        padding: 4%;
-        overflow-y: auto;
-    }
-    
-    #section2 .vis .title p {
-        display: none;
-    }
-    
-    #section2 .vis .title + div h2 {
-        font-size: 36px;
-    }
-    
-    #section2 .vis .title + div h3 {
-        font-size: 24px;
-    }
-    
-    #section2 .vis .title + div .fa {
-        margin-left: 0;
-    }
-    
-    .fp-controlArrow.fp-prev::before,
-    .fp-controlArrow.fp-next::before {
-        width: 50px;
-        height: 50px;
-        line-height: 50px;
-        font-size: 24px;
-        bottom: -300px;
-    }
-    
-    .fp-controlArrow.fp-prev::before {
-        left: 20px;
-    }
-    
-    .fp-controlArrow.fp-next::before {
-        right: 20px;
-    }
-    
-    /* section3 반응형 */
-    #section3 .tit {
-        font-size: 36px;
-    }
-    
-    #section3 .spb {
-        flex-direction: column;
-    }
-    
-    #section3 .r_pos {
-        padding-top: 0;
-        text-align: center;
-    }
-    
-    #section3 .r_pos img {
-        width: 80%;
-        max-width: 400px;
-    }
-    
-    #section3 .hex {
-        display: none;
-    }
-    
-    #section3 .pos ul li {
-        margin: 40px 0;
-    }
-    
-    /* section4 반응형 */
-    #section4 .bnr {
-        width: 90%;
-        padding: 4%;
-        top: 50%;
-        transform: translateY(-50%);
-        border-radius: 20px;
-        margin: 0 5%;
-    }
-    
-    #section4 .bnr .s_title,
-    #section4 .b_title {
-        text-align: center;
-        margin-right: 0;
-    }
-    
-    #section4 .bnr .t_p {
-        font-size: 20px;
-    }
-    
-    .text_box {
-        font-size: 1.5rem;
-    }
-    
-    /* 버튼 위치 조정 */
-    .t_btn, .p_top {
-        right: 30px;
-        bottom: 30px;
-    }
-}
-
-/* 모바일 사이즈 (768px 이하) */
-@media screen and (max-width: 768px) {
-    /* section0 모바일 */
-    #section0 .main h1 {
-        font-size: 28px;
-    }
-    
     #section0 .main span {
-        font-size: 28px;
+        font-size: 50px;
+        left: 280px;
+        top: 200px;
     }
     
-    #section0 .main > .main_v > p {
-        font-size: 12px;
-        position: static;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    
-    /* section1 모바일 */
-    #section1 .left .name h2 {
-        font-size: 20px;
-    }
-    
-    #section1 .center .skills h2 {
-        font-size: 20px;
-    }
-    
-    #section1 .right > div > ul > li h3 {
-        font-size: 20px;
-    }
-    
-    .drawsvg, svg {
-        height: 150px;
-    }
-    
-    #fade-text {
-        font-size: 30px;
-    }
-    
-    /* section2 모바일 */
-    #section2 .vis .title + div h2 {
-        font-size: 28px;
-    }
-    
-    #section2 .vis .title + div ul li {
-        font-size: 12px;
-        margin-bottom: 50px;
-    }
-    
-    #section2 .vis .title + div dl dd {
-        font-size: 16px;
-        margin-bottom: 20px;
-    }
-    
-    #section2 .vis .title + div h3 {
-        font-size: 20px;
-    }
-    
-    #section2 .vis .title + div h3::after {
-        width: 200px;
-    }
-    
-    /* section3 모바일 */
-    #section3 .tit {
-        font-size: 28px;
-    }
-    
-    #section3 .pos ul li h2 {
-        font-size: 18px;
-    }
-    
-    #section3 .pos ul li p {
-        font-size: 14px;
-    }
-    
-    /* section4 모바일 */
-    #section4 .bnr p {
-        font-size: 14px;
-    }
-    
-    #section4 .bnr a {
-        font-size: 14px;
-        word-break: break-all;
-    }
-    
-    .text_box {
-        font-size: 1.2rem;
-    }
-    
-    .blink {
-        font-size: 1.8rem;
-    }
-}
-
-/* 작은 모바일 (480px 이하) */
-@media screen and (max-width: 480px) {
-    #section0 .main > .main_v > .title li {
-        margin: 5px 10px;
-    }
-    
-    #section0 .main > .main_v > .title li a {
-        font-size: 14px;
-    }
-    
-    #section1 .photo > img {
-        height: 150px;
-    }
-    
-    #section1 .photo .p_bg1 {
-        height: 150px;
-    }
-    
-    #section2 .vis .title + div h2 {
-        font-size: 24px;
-    }
-    
-    #section2 .vis .title + div h3 + p {
-        margin-bottom: 50px;
-        font-size: 14px;
-    }
-    
-    /* 네비게이션 도트 크기 조정 */
-    #fp-nav ul li {
-        margin: 5px;
-    }
-    
-    #fp-nav ul li a span {
-        width: 3px;
-        height: 3px;
-    }
-    
-    #fp-nav ul li:hover a span,
-    #fp-nav ul li a.active span {
-        width: 8px;
-        height: 8px;
-        margin: -4px 0 0 -4px;
-    }
-}
-
-/* 높이가 낮은 화면 대응 */
-@media screen and (max-height: 700px) {
+    /* Section1 조정 */
     #section1 .intro {
-        padding: 2%;
-    }
-    
-    #section1 .photo > img {
-        height: 150px;
-    }
-    
-    #section1 .photo .p_bg1 {
-        height: 150px;
-    }
-    
-    #section3 .pbt {
-        padding: 2% 4%;
-    }
-    
-    #section3 .pos ul li {
-        margin: 30px 0;
-    }
-}
-
-/* 중요: 강제 높이 해제 */
-@media screen and (max-width: 1400px) {
-    .fp-section,
-    .fp-slide,
-    .fp-tableCell {
-        height: auto !important;
-        min-height: 100vh !important;
-    }
-    
-    /* fullpage wrapper 높이 자동 */
-    #fullpage {
-        height: auto !important;
-    }
-    
-    /* 오버플로우 허용 */
-    html.fp-enabled,
-    .fp-enabled body {
-        overflow: auto !important;
-        height: auto !important;
-    }
-}
-
-/* Section별 특별 처리 */
-@media screen and (max-width: 1400px) {
-    /* Section2 포트폴리오 완전 재구성 */
-    #section2 .vis {
-        display: block !important;
-        padding: 20px;
-    }
-    
-    #section2 .vis .title {
-        width: 100% !important;
-        height: 300px !important;
-        margin-bottom: 20px;
-    }
-    
-    #section2 .vis .title + div {
-        width: 100% !important;
-        height: auto !important;
-        padding: 20px !important;
-    }
-    
-    /* Section3 Possibility 레이아웃 */
-    #section3 .pbt {
-        height: auto !important;
-        padding: 40px 20px !important;
-    }
-    
-    #section3 .spb {
-        display: block !important;
-    }
-    
-    #section3 .r_pos {
-        margin-top: 40px;
-        text-align: center;
-    }
-    
-    #section3 .r_pos img {
-        position: static !important;
-        width: 80% !important;
-        max-width: 600px !important;
-        margin: 0 auto;
-        display: block;
-    }
-}
-
-/* fullPage.js 반응형 클래스 적용 시 */
-.fp-responsive .section {
-    height: auto !important;
-    min-height: 100vh;
-}
-
-.fp-responsive .fp-tableCell {
-    height: auto !important;
-}
-
-.fp-responsive #fp-nav {
-    display: none;
-}
-
-/* 추가 반응형 강화 */
-@media screen and (max-width: 1400px) {
-    /* 화살표 위치 조정 */
-    .fp-controlArrow.fp-prev::before {
-        left: 20px !important;
-        bottom: 50% !important;
-        transform: translateY(50%);
-    }
-    
-    .fp-controlArrow.fp-next::before {
-        right: 20px !important;
-        bottom: 50% !important;
-        transform: translateY(50%);
-    }
-    
-    /* section1 조정 */
-    #section1 .intro {
-        padding: 2% 4%;
+        padding: 3% 5% 3% 8%;
         gap: 20px;
     }
-    
-    #section1 .right > div .r_div {
-        position: relative;
-        top: 0;
-        margin-top: 20px;
+    #section1 .center .skills ul li > div {
+        width: 250px;
     }
     
-    /* section3 그래프 조정 */
+    /* Section2 조정 */
+    #section2 .vis .title + div h2 {
+        font-size: 50px;
+    }
+    
+    /* Section3 조정 */
+    #section3 .tit {
+        font-size: 50px;
+    }
     #section3 .r_pos {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        padding-top: 50px;
     }
-    
-    #section3 .r_pos img {
-        width: 100%;
-        max-width: 500px;
-        height: auto;
-    }
-    
     #section3 .hex {
-        right: 10%;
-        width: 60%;
-        max-width: 400px;
+        right: 150px;
+        width: 400px;
+        height: 350px;
     }
 }
 
-/* 노트북 화면 전용 스타일 (1600px 이하) */
-@media screen and (max-width: 1600px) {
-    /* Section0 - 옥지 이미지 침범 문제 해결 */
-    #section0 {
-        overflow: hidden !important;
-        position: relative;
-    }
-    
+/* 1400px 이하 - 약간 더 작게 */
+@media screen and (max-width: 1400px) {
     #section0 .main .okji {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        max-height: 80vh;
-        z-index: 1;
+        left: calc(50% - 250px);
     }
-    
     #section0 .main .okji img {
-        height: 70vh;
-        max-height: 600px;
+        height: 600px;
     }
-    
     #section0 .main span {
-        position: relative;
-        z-index: 2;
-        font-size: 3.5vw;
-        top: auto;
-        left: auto;
-        transform: none;
-        text-align: center;
-        display: block;
-        margin-top: 20px;
-    }
-    
-    /* Section1 - 증명사진 고정 및 빵빵이 위치 조정 */
-    #section1 {
-        overflow: hidden;
+        font-size: 40px;
+        left: 220px;
+        top: 150px;
     }
     
     #section1 .photo > img,
     #section1 .photo .p_bg1 {
-        height: 200px !important;
-        width: auto;
-    }
-    
-    #section1 .b1,
-    #section1 .b2 {
-        z-index: -1 !important;
-        opacity: 0.5;
-    }
-    
-    #section1 .b1 {
-        top: 10px;
-        right: 10px;
-        width: 100px;
-    }
-    
-    #section1 .b2 {
-        bottom: 10px;
-        left: 10px;
-        width: 100px;
-    }
-    
-    /* Section2 - 태그와 에필로그 정리 */
-    #section2 .vis {
-        display: flex;
-        flex-direction: column;
-        height: auto !important;
-        min-height: 100vh;
-    }
-    
-    #section2 .vis .title {
-        width: 100% !important;
-        height: 40vh !important;
-        min-height: 300px;
-    }
-    
-    #section2 .vis .title + div {
-        width: 100% !important;
-        height: auto !important;
-        padding: 30px !important;
-        flex: 1;
-        overflow-y: auto;
-    }
-    
-    #section2 .vis .title + div ul {
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 20px;
-    }
-    
-    #section2 .vis .title + div ul li {
-        margin: 5px 5px !important;
-        font-size: 12px !important;
-        padding: 4px 8px !important;
+        height: 250px;
     }
     
     #section2 .vis .title + div h2 {
-        font-size: 2.5rem !important;
-        margin-bottom: 20px !important;
-    }
-    
-    #section2 .vis .title + div dl dd {
-        font-size: 14px !important;
-        margin-bottom: 15px !important;
-    }
-    
-    #section2 .vis .title + div h3 {
-        font-size: 1.8rem !important;
-        margin-top: 20px !important;
-    }
-    
-    #section2 .vis .title + div h3 + p {
-        font-size: 14px !important;
-        line-height: 1.6 !important;
-        margin-bottom: 30px !important;
-    }
-    
-    /* Section3 - 육각형과 이미지 위치 조정 */
-    #section3 {
-        overflow: hidden;
-    }
-    
-    #section3 .pbt {
-        padding: 40px 20px !important;
-        height: auto !important;
+        font-size: 40px;
     }
     
     #section3 .tit {
-        font-size: 2.5rem !important;
+        font-size: 40px;
+    }
+    #section3 .hex {
+        right: 100px;
+        width: 350px;
+        height: 300px;
+    }
+}
+
+/* 1200px 이하 - 레이아웃 변경 시작점 */
+@media screen and (max-width: 1200px) {
+    /* Section0 - 옥지 이미지 숨기고 텍스트 중앙 정렬 */
+    #section0 .main .okji {
+        display: none;
+    }
+    #section0 .main span {
+        position: relative;
+        top: auto;
+        left: auto;
+        text-align: center;
+        display: block;
+        font-size: 36px;
+        margin: 50px 0;
+    }
+    #section0 .main > .main_v {
+        margin-top: 20%;
+    }
+    #section0 .main > .main_v > .title {
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-right: 0;
+    }
+    #section0 .main > .main_v > .title li {
+        margin: 10px 20px;
+    }
+    #section0 .main > .main_v > p {
+        position: static;
+        text-align: center;
         margin-bottom: 30px;
     }
     
+    /* Section1 - 세로 배열로 변경 */
+    #section1 .intro {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 4%;
+    }
+    #section1 .left, 
+    #section1 .center, 
+    #section1 .right {
+        width: 100%;
+        max-width: 600px;
+    }
+    #section1 .center .skills ul li > div {
+        width: 100%;
+        max-width: 400px;
+    }
+    #section1 .right > div .r_div {
+        position: relative;
+        top: 0;
+        margin-top: 20px;
+        height: auto;
+        padding: 30px;
+    }
+    #section1 .b1, #section1 .b2 {
+        display: none;
+    }
+    
+    /* Section2 - 세로 배열 */
+    #section2 .vis {
+        flex-direction: column;
+    }
+    #section2 .vis .title {
+        width: 100%;
+        height: 300px;
+        min-height: 300px;
+    }
+    #section2 .vis .title p {
+        display: none;
+    }
+    #section2 .vis .title + div {
+        width: 100%;
+        padding: 30px;
+    }
+    #section2 .vis .title + div h2 {
+        font-size: 32px;
+    }
+    #section2 .vis .title + div ul li {
+        margin-bottom: 30px;
+        font-size: 12px;
+    }
+    #section2 .vis .title + div .fa {
+        margin-left: 0;
+    }
+    #section2 .vis .title + div h3 + p {
+        margin-bottom: 50px;
+    }
+    
+    /* 슬라이드 화살표 조정 */
+    .fp-controlArrow.fp-prev::before,
+    .fp-controlArrow.fp-next::before {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 30px;
+        bottom: 20px;
+    }
+    .fp-controlArrow.fp-prev::before {
+        left: 20px;
+    }
+    .fp-controlArrow.fp-next::before {
+        right: 20px;
+    }
+    
+    /* Section3 - 세로 배열 */
     #section3 .spb {
-        display: flex;
         flex-direction: column;
         align-items: center;
     }
-    
     #section3 .pos {
         order: 2;
         width: 100%;
         max-width: 600px;
     }
-    
-    #section3 .pos ul li {
-        margin: 30px 0 !important;
-    }
-    
-    #section3 .pos ul li h2 {
-        font-size: 1.2rem !important;
-    }
-    
-    #section3 .pos ul li p {
-        font-size: 0.9rem !important;
-    }
-    
     #section3 .r_pos {
         order: 1;
-        position: relative;
         width: 100%;
         max-width: 500px;
+        padding-top: 0;
         margin-bottom: 40px;
-        padding-top: 0 !important;
+        text-align: center;
     }
-    
     #section3 .r_pos img {
-        width: 100% !important;
-        height: auto !important;
-        position: relative !important;
+        width: 80%;
+        max-width: 400px;
+        height: auto;
     }
-    
     #section3 .hex {
-        position: absolute !important;
-        top: 50% !important;
-        left: 50% !important;
-        transform: translate(-50%, -50%) !important;
-        width: 60% !important;
-        height: 60% !important;
-        max-width: 300px !important;
-        max-height: 300px !important;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+        height: 60%;
+        max-width: 300px;
+        max-height: 300px;
+        right: auto;
     }
-    
     #section3 .b3 {
-        display: none !important;
+        display: none;
+    }
+    #section3 .pos ul li {
+        margin: 50px 0;
+    }
+    
+    /* Section4 조정 */
+    #section4 .bnr {
+        width: 80%;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0 10%;
+        border-radius: 20px;
+    }
+    #section4 .bnr .s_title,
+    #section4 .b_title {
+        text-align: center;
+        margin-right: 0;
     }
 }
 
-/* 더 작은 노트북 (1366px 이하) */
-@media screen and (max-width: 1366px) {
-    #section0 .main > .main_v {
-        margin-top: 50vh;
+/* 768px 이하 - 모바일 최적화 */
+@media screen and (max-width: 768px) {
+    /* Section0 */
+    #section0 .main h1 {
+        font-size: 28px;
+    }
+    #section0 .main span {
+        font-size: 24px;
+    }
+    #section0 .main > .main_v > .title li {
+        margin: 8px 15px;
+    }
+    #section0 .main > .main_v > .title li a {
+        font-size: 14px;
     }
     
+    /* Section1 */
+    #section1 .photo > img,
+    #section1 .photo .p_bg1 {
+        height: 200px;
+    }
+    #section1 .left .name h2 {
+        font-size: 20px;
+    }
+    #section1 .center .skills h2 {
+        font-size: 20px;
+    }
+    #section1 .right > div > ul > li h3 {
+        font-size: 20px;
+    }
+    .drawsvg, svg {
+        height: 120px;
+    }
+    #fade-text {
+        font-size: 24px;
+    }
+    
+    /* Section2 */
     #section2 .vis .title + div h2 {
-        font-size: 2rem !important;
+        font-size: 24px;
+    }
+    #section2 .vis .title + div h3 {
+        font-size: 20px;
+    }
+    #section2 .vis .title + div h3::after {
+        width: 150px;
+    }
+    #section2 .vis .title + div dl dd {
+        font-size: 16px;
+        margin-bottom: 20px;
     }
     
-    #section2 .vis .title + div .fa {
-        padding: 8px 16px !important;
-        font-size: 14px !important;
+    /* Section3 */
+    #section3 .tit {
+        font-size: 28px;
+    }
+    #section3 .pos ul li h2 {
+        font-size: 18px;
+    }
+    #section3 .pos ul li p {
+        font-size: 14px;
+    }
+    #section3 .pos ul li {
+        margin: 30px 0;
+    }
+    
+    /* Section4 */
+    #section4 .bnr {
+        width: 90%;
+        margin: 0 5%;
+        padding: 4%;
+    }
+    #section4 .bnr .t_p {
+        font-size: 20px;
+    }
+    #section4 .bnr p {
+        font-size: 16px;
+    }
+    #section4 .bnr a {
+        font-size: 16px;
+    }
+    .text_box {
+        font-size: 1.2rem;
+    }
+    .blink {
+        font-size: 1.8rem;
+    }
+    
+    /* 버튼 위치 조정 */
+    .t_btn, .p_top {
+        right: 20px;
+        bottom: 20px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 12px;
     }
 }
 
-/* 높이가 낮은 노트북 화면 대응 */
-@media screen and (max-height: 800px) and (max-width: 1600px) {
-    #section1 .intro {
-        padding: 20px !important;
+/* 480px 이하 - 작은 모바일 */
+@media screen and (max-width: 480px) {
+    #section0 .main > .main_v > .title li {
+        margin: 5px 10px;
+    }
+    #section0 .main > .main_v > .title li a {
+        font-size: 12px;
     }
     
     #section1 .photo > img,
     #section1 .photo .p_bg1 {
-        height: 150px !important;
-    }
-    
-    #section2 .vis .title {
-        height: 30vh !important;
-        min-height: 200px;
-    }
-    
-    #section3 .r_pos {
-        max-width: 400px;
-    }
-}
-    /* 전체 폰트 크기 조정 */
-    body {
-        font-size: 14px;
-    }
-    
-    /* section0 조정 */
-    #section0 .main {
-        padding: 2% 4%;
-    }
-    
-    #section0 .main .okji {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    
-    #section0 .main .okji img {
-        height: 600px;
-    }
-    
-    #section0 .main span {
-        font-size: 50px;
-        left: 50%;
-        top: 40%;
-        transform: translate(-50%, -50%);
-        width: 90%;
-        text-align: center;
-    }
-    
-    /* section1 플렉스 조정 */
-    #section1 .intro {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto;
-        gap: 30px;
-    }
-    
-    #section1 .left {
-        grid-column: 1 / 2;
-    }
-    
-    #section1 .center {
-        grid-column: 2 / 3;
-    }
-    
-    #section1 .right {
-        grid-column: 1 / 3;
-        margin-top: 20px;
-    }
-    
-    /* section2 슬라이드 조정 */
-    #section2 .vis .title {
-        width: 50%;
-    }
-    
-    #section2 .vis .title + div {
-        width: 50%;
-        padding: 3%;
+        height: 150px;
     }
     
     #section2 .vis .title + div h2 {
-        font-size: 40px;
+        font-size: 20px;
+    }
+    #section2 .vis .title + div h3 + p {
+        font-size: 14px;
+        margin-bottom: 30px;
     }
     
-    #section2 .vis .title + div dl dd {
-        font-size: 16px;
+    #section4 .bnr .t_p {
+        font-size: 18px;
     }
-    
-    #section2 .vis .title + div .fa {
-        margin-left: auto;
-        display: block;
-        width: fit-content;
-        margin-top: 20px;
+    #section4 .bnr p {
+        font-size: 14px;
+    }
+    #section4 .bnr a {
+        font-size: 14px;
+        word-break: break-all;
+    }
+    .text_box {
+        font-size: 1rem;
     }
 }
 
-/* 높이 제한 화면 추가 대응 */
-@media screen and (max-height: 900px) {
-    /* section별 높이 조정 */
-    .fp-section {
-        min-height: auto !important;
+/* 높이가 낮은 화면 대응 */
+@media screen and (max-height: 700px) and (min-width: 1201px) {
+    #section1 .intro {
+        padding: 2%;
     }
     
     #section1 .photo > img,
@@ -1508,88 +1065,11 @@ ul, li{
         height: 200px;
     }
     
-    #section1 .drawsvg, 
-    #section1 svg {
-        height: 150px;
+    #section3 .pbt {
+        padding: 2% 4%;
     }
     
     #section3 .pos ul li {
         margin: 40px 0;
-    }
-    
-    #section3 .pos ul li h2 {
-        font-size: 20px;
-    }
-    
-    #section3 .pos ul li p {
-        font-size: 14px;
-    }
-}
-
-/* overflow 처리 */
-@media screen and (max-width: 1400px) {
-    .fp-section {
-        overflow-y: auto !important;
-        overflow-x: hidden !important;
-    }
-    
-    .fp-tableCell {
-        display: block !important;
-        height: auto !important;
-        vertical-align: top !important;
-    }
-}
-
-/* 1400px 이하에서 fullPage 파괴 시 스타일 */
-@media screen and (max-width: 1400px) {
-    /* 기본 레이아웃 리셋 */
-    html, body {
-        overflow: auto !important;
-        height: auto !important;
-    }
-    
-    .section {
-        height: auto !important;
-        min-height: 100vh;
-        position: relative !important;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    /* 네비게이션 숨기기 */
-    #fp-nav {
-        display: none !important;
-    }
-    
-    /* 슬라이드 화살표 위치 조정 */
-    .fp-controlArrow {
-        display: none !important;
-    }
-    
-    /* 슬라이드 레이아웃 조정 */
-    .fp-slides,
-    .fp-slidesContainer {
-        width: 100% !important;
-        transform: none !important;
-        transition: none !important;
-    }
-    
-    .fp-slide {
-        width: 100% !important;
-        position: relative !important;
-        float: none !important;
-    }
-    
-    /* 슬라이드를 세로로 배치 */
-    #section2 .slide {
-        display: block;
-        margin-bottom: 100px;
-        min-height: 100vh;
-    }
-    
-    /* 스크롤 부드럽게 */
-    html {
-        scroll-behavior: smooth;
     }
 }
