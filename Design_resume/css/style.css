@@ -523,11 +523,11 @@ ul, li{
     justify-content: space-between;
 }
 #section3 .pos ul{
-    margin-top: 50px;
+    margin-top: 0;
 }
 #section3 .pos ul li{
     color: #473109;
-    margin: 80px 0;
+    margin: 40px 0;
 }
 #section3 .pos ul li h2{
     margin-bottom: 10px;
